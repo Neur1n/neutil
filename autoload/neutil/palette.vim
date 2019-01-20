@@ -2,9 +2,10 @@ scriptencoding utf-8
 
 function! neutil#palette#Palette() abort
   return {
-        \ 'bgh':    {'c': 235, 'g': '#262626'},
+        \ 'bgh':    {'c': 234, 'g': '#1c1c1c'},
+        \ 'bgm':    {'c': 235, 'g': '#262626'},
         \ 'bgs':    {'c': 236, 'g': '#303030'},
-        \ 'fgh':    {'c': 222, 'g': '#ffd787'},
+        \ 'fgh':    {'c': 223, 'g': '#ffd7af'},
         \ 'fgs':    {'c': 229, 'g': '#ffffaf'},
         \ 'gray':   {'c': 245, 'g': '#8a8a8a'},
         \ 'red':    {'c': 203, 'g': '#ff5f5f'},
@@ -13,7 +14,7 @@ function! neutil#palette#Palette() abort
         \ 'green':  {'c': 148, 'g': '#afd700'},
         \ 'cyan':   {'c': 113, 'g': '#87d75f'},
         \ 'blue':   {'c': 159, 'g': '#afffff'},
-        \ 'purple': {'c': 141, 'g': '#af87ff'},
+        \ 'purple': {'c': 129, 'g': '#af00ff'}
         \ }
 endfunction
 
