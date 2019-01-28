@@ -5,10 +5,12 @@ function! neutil#palette#Palette() abort
         \ 'bgh':    {'c': 234, 'g': '#1c1c1c'},
         \ 'bgm':    {'c': 235, 'g': '#262626'},
         \ 'bgs':    {'c': 236, 'g': '#303030'},
-        \ 'fgh':    {'c': 144, 'g': '#afaf87'},
+        \ 'fgh':    {'c': 222, 'g': '#ffd787'},
         \ 'fgm':    {'c': 223, 'g': '#ffd7af'},
         \ 'fgs':    {'c': 230, 'g': '#ffffd7'},
-        \ 'gray':   {'c': 239, 'g': '#4e4e4e'},
+        \ 'grayh':  {'c': 237, 'g': '#3a3a3a'},
+        \ 'graym':  {'c': 239, 'g': '#4e4e4e'},
+        \ 'grays':  {'c': 241, 'g': '#626262'},
         \ 'red':    {'c': 203, 'g': '#ff5f5f'},
         \ 'orange': {'c': 208, 'g': '#ff8700'},
         \ 'yellow': {'c': 214, 'g': '#ffaf00'},
@@ -18,27 +20,6 @@ function! neutil#palette#Palette() abort
         \ 'purple': {'c': 175, 'g': '#d787af'}
         \ }
 endfunction
-
-" function! neutil#palette#Highlight(group, fg, bg, sty) abort
-"   if type(a:fg) == v:t_dict
-"     let l:fgc = a:fg.c
-"     let l:fgg = a:fg.g
-"   else
-"     let l:fgc = a:fg
-"     let l:fgg = a:fg
-"   endif
-
-"   if type(a:bg) == v:t_dict
-"     let l:bgc = a:bg.c
-"     let l:bgg = a:bg.g
-"   else
-"     let l:bgc = a:bg
-"     let l:bgg = a:bg
-"   endif
-
-"   execute printf('highlight %s ctermfg=%s ctermbg=%s guifg=%s guibg=%s cterm=%s gui=%s',
-"         \ a:group, l:fgc, l:bgc, l:fgg, l:bgg, a:sty, a:sty)
-" endfunction
 
 function! neutil#palette#Highlight(group, fg, ...) abort
   " Arguments: group, fg, bg, sty, sp; fg and bg should be dict or str.
@@ -82,7 +63,4 @@ function! neutil#palette#Highlight(group, fg, ...) abort
   endif
 
   execute join(l:cmd, ' ')
-
-  " execute printf('highlight %s ctermfg=%s ctermbg=%s guifg=%s guibg=%s cterm=%s gui=%s',
-  "       \ a:group, l:fgc, l:bgc, l:fgg, l:bgg, l:sty, l:sty)
 endfunction
